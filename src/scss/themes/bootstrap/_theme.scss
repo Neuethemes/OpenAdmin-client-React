@@ -1,0 +1,17 @@
+// Bootstrap theme
+$enable-rounded: false;
+$form-group-margin-bottom: 1.5rem;
+$form-check-input-gutter: 1.5rem;
+$link-hover-decoration: none;
+$font-family-sans-serif: "open sans", "Helvetica Neue", helvetica, arial, sans-serif;
+$link-color: inherit;
+$link-hover-color: rgba(0, 0, 0, .8);
+$font-size-base: .8rem;
+
+// Bootstrap
+@import "../../../../node_modules/bootstrap/scss/bootstrap";
+
+@import "../../helpers/variables";
+
+@import "color-schemes/contrast";
+@import "controls";
