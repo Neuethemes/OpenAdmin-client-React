@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
-import Widget from "../../../components/Widget";
+import WidgetComponent from "../../../components/Widget";
 
-class PageBadges extends Component {
+class BadgesPage extends Component {
 
   render() {
     return (
@@ -12,7 +12,7 @@ class PageBadges extends Component {
         <div className="row">
 
           <div className="col-lg-12">
-            <Widget header='Example' className='shadow-01' excerpt={
+            <WidgetComponent header='Example' className='shadow-01' excerpt={
               <span>
                 Badges scale to match the size of the immediate parent element by using relative font sizing and <code
                 className="highlighter-rouge">em</code> units.
@@ -26,11 +26,11 @@ class PageBadges extends Component {
                 <div className="h5">Example heading <span className="badge badge-secondary">New</span></div>
                 <div className="h6">Example heading <span className="badge badge-secondary">New</span></div>
               </div>
-            </Widget>
+            </WidgetComponent>
           </div>
 
           <div className="col-lg-6">
-            <Widget header='Notifications' className='shadow-01' excerpt={
+            <WidgetComponent header='Notifications' className='shadow-01' excerpt={
               <span>Badges can be used as part of links or buttons to provide a counter.</span>
             }>
               <div className="bd-example">
@@ -38,11 +38,11 @@ class PageBadges extends Component {
                   Notifications <span className="badge badge-light">4</span>
                 </button>
               </div>
-            </Widget>
+            </WidgetComponent>
           </div>
 
           <div className="col-lg-6">
-            <Widget header='Contextual variations' className='shadow-01' excerpt={
+            <WidgetComponent header='Contextual variations' className='shadow-01' excerpt={
               <span>Add any of the below mentioned modifier classes to change the appearance of a badge.</span>
             }>
               <div className="bd-example">
@@ -55,11 +55,11 @@ class PageBadges extends Component {
                 <span className="badge badge-light">Light</span>
                 <span className="badge badge-dark">Dark</span>
               </div>
-            </Widget>
+            </WidgetComponent>
           </div>
 
           <div className="col-lg-6">
-            <Widget header='Pill badges' className='shadow-01' excerpt={
+            <WidgetComponent header='Pill badges' className='shadow-01' excerpt={
               <span>
                 Use the <code className="highlighter-rouge">.badge-pill</code> modifier class to make badges more rounded (with a larger <code
                 className="highlighter-rouge">border-radius</code> and additional horizontal <code className="highlighter-rouge">padding</code>). Useful if
@@ -76,11 +76,11 @@ class PageBadges extends Component {
                 <span className="badge badge-pill badge-light">Light</span>
                 <span className="badge badge-pill badge-dark">Dark</span>
               </div>
-            </Widget>
+            </WidgetComponent>
           </div>
 
           <div className="col-lg-6">
-            <Widget header='Links' className='shadow-01' excerpt={
+            <WidgetComponent header='Links' className='shadow-01' excerpt={
               <span>
                 Using the contextual <code className="highlighter-rouge">.badge-*</code> classes on an <code className="highlighter-rouge">&lt;a&gt;</code>
                 element quickly provide <em>actionable</em> badges with hover and focus states.
@@ -96,7 +96,7 @@ class PageBadges extends Component {
                 <a href="#" className="badge badge-light">Light</a>
                 <a href="#" className="badge badge-dark">Dark</a>
               </div>
-            </Widget>
+            </WidgetComponent>
           </div>
 
         </div>
@@ -106,4 +106,4 @@ class PageBadges extends Component {
   }
 }
 
-export default PageBadges;
+export default BadgesPage;

@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 
-class Messages extends Component {
+class MessagesComponent extends Component {
   static defaultProps = {
     list: []
   };
@@ -29,4 +29,4 @@ class Messages extends Component {
   }
 }
 
-export default Messages;
+export default MessagesComponent;

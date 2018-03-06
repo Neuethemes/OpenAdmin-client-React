@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
-import Widget from "../../../components/Widget";
+import WidgetComponent from "../../../components/Widget";
 
-class PageTypography extends Component {
+class TypographyPage extends Component {
 
   render() {
     return (
@@ -12,7 +12,7 @@ class PageTypography extends Component {
         <div className="row">
 
           <div className="col-lg-6">
-            <Widget header="H Headings" className='shadow-01' excerpt={
+            <WidgetComponent header="H Headings" className='shadow-01' excerpt={
               <span>
                 All HTML headings, <code className="highlighter-rouge">&lt;h1&gt;</code> through <code className="highlighter-rouge">&lt;h6&gt;</code>, are available.
               </span>
@@ -25,11 +25,11 @@ class PageTypography extends Component {
                 <h5>h5. Bootstrap heading</h5>
                 <h6>h6. Bootstrap heading</h6>
               </div>
-            </Widget>
+            </WidgetComponent>
           </div>
 
           <div className="col-lg-6">
-            <Widget header="Headings via classes" className='shadow-01' excerpt={
+            <WidgetComponent header="Headings via classes" className='shadow-01' excerpt={
               <span>
                 <code className="highlighter-rouge">.h1</code> through <code className="highlighter-rouge">.h6</code> classes are also available, for when
                 you want to match the font styling of a heading but cannot use the associated HTML element.
@@ -43,11 +43,11 @@ class PageTypography extends Component {
                 <p className="h5">h5. Bootstrap heading</p>
                 <p className="h6">h6. Bootstrap heading</p>
               </div>
-            </Widget>
+            </WidgetComponent>
           </div>
 
           <div className="col-lg-6">
-            <Widget header="Display Headings" className='shadow-01' excerpt={
+            <WidgetComponent header="Display Headings" className='shadow-01' excerpt={
               <span>
                 Traditional heading elements are designed to work best in the meat of your page content. When you need a heading to stand out, consider
                 using a <strong>display heading</strong>—a larger, slightly more opinionated heading style.
@@ -59,7 +59,7 @@ class PageTypography extends Component {
                 <h1 className="display-3">Display 3</h1>
                 <h1 className="display-4">Display 4</h1>
               </div>
-            </Widget>
+            </WidgetComponent>
           </div>
 
           <div className="col-lg-6">
@@ -67,18 +67,18 @@ class PageTypography extends Component {
             <div className="row">
 
               <div className="col-lg-12">
-                <Widget header="Customizing headings" className='shadow-01' excerpt={
+                <WidgetComponent header="Customizing headings" className='shadow-01' excerpt={
                   <span>Use the included utility classes to recreate the small secondary heading text from Bootstrap 3.</span>
                 }>
                   <h3>
                     Fancy display heading
                     <small className="text-muted">With faded secondary text</small>
                   </h3>
-                </Widget>
+                </WidgetComponent>
               </div>
 
               <div className="col-lg-12">
-                <Widget header="Lead" className='shadow-01' excerpt={
+                <WidgetComponent header="Lead" className='shadow-01' excerpt={
                   <span>Make a paragraph stand out by adding <code className="highlighter-rouge">.lead</code>.</span>
                 }>
                   <div className="bd-example">
@@ -86,7 +86,7 @@ class PageTypography extends Component {
                       Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Duis mollis, est non commodo luctus.
                     </p>
                   </div>
-                </Widget>
+                </WidgetComponent>
               </div>
 
             </div>
@@ -101,7 +101,7 @@ class PageTypography extends Component {
         <div className="row">
 
           <div className="col-lg-9">
-            <Widget header="Inline text elements" className='shadow-01' excerpt={
+            <WidgetComponent header="Inline text elements" className='shadow-01' excerpt={
               <span>Styling for common inline HTML5 elements.</span>
             }>
               <div className="bd-example">
@@ -123,11 +123,11 @@ class PageTypography extends Component {
                 <p><strong>This line rendered as bold text.</strong></p>
                 <p><em>This line rendered as italicized text.</em></p>
               </div>
-            </Widget>
+            </WidgetComponent>
           </div>
 
           <div className="col-lg-3">
-            <Widget header="Abbreviations" className='shadow-01' excerpt={
+            <WidgetComponent header="Abbreviations" className='shadow-01' excerpt={
               <span>
                 Stylized implementation of HTML’s <code className="highlighter-rouge">&lt;abbr&gt;</code> element for abbreviations and acronyms to show
                 the expanded version on hover. Abbreviations have a default underline and gain a help cursor to provide additional context on hover and to
@@ -138,7 +138,7 @@ class PageTypography extends Component {
                 <p><abbr title="attribute">attr</abbr></p>
                 <p><abbr title="HyperText Markup Language" className="initialism">HTML</abbr></p>
               </div>
-            </Widget>
+            </WidgetComponent>
           </div>
 
         </div>
@@ -148,7 +148,7 @@ class PageTypography extends Component {
         <div className="row">
 
           <div className="col-lg-6">
-            <Widget header="Simple Blockquote" className='shadow-01' excerpt={
+            <WidgetComponent header="Simple Blockquote" className='shadow-01' excerpt={
               <span>
                 For quoting blocks of content from another source within your document. Wrap <code className="highlighter-rouge">&lt;blockquote
                 class="blockquote"&gt;</code> around any <abbr title="HyperText Markup Language">HTML</abbr> as the quote.
@@ -160,11 +160,11 @@ class PageTypography extends Component {
                   <footer className="blockquote-footer">Someone famous in <cite title="Source Title">Source Title</cite></footer>
                 </blockquote>
               </div>
-            </Widget>
+            </WidgetComponent>
           </div>
 
           <div className="col-lg-6">
-            <Widget header="Naming a source" className='shadow-01' excerpt={
+            <WidgetComponent header="Naming a source" className='shadow-01' excerpt={
               <span>
                 Add a <code className="highlighter-rouge">&lt;footer class="blockquote-footer"&gt;</code> for identifying the source. Wrap the name of the
                 source work in <code className="highlighter-rouge">&lt;cite&gt;</code>.
@@ -176,11 +176,11 @@ class PageTypography extends Component {
                   <footer className="blockquote-footer">Someone famous in <cite title="Source Title">Source Title</cite></footer>
                 </blockquote>
               </div>
-            </Widget>
+            </WidgetComponent>
           </div>
 
           <div className="col-lg-6">
-            <Widget header="Central alignment" className='shadow-01' excerpt={
+            <WidgetComponent header="Central alignment" className='shadow-01' excerpt={
               <span>Use text utilities as needed to change the alignment of your blockquote.</span>
             }>
               <div className="bd-example">
@@ -189,11 +189,11 @@ class PageTypography extends Component {
                   <footer className="blockquote-footer">Someone famous in <cite title="Source Title">Source Title</cite></footer>
                 </blockquote>
               </div>
-            </Widget>
+            </WidgetComponent>
           </div>
 
           <div className="col-lg-6">
-            <Widget header="Right Alignment" className='shadow-01' excerpt={
+            <WidgetComponent header="Right Alignment" className='shadow-01' excerpt={
               <span>Use text utilities as needed to change the alignment of your blockquote.</span>
             }>
               <div className="bd-example">
@@ -202,7 +202,7 @@ class PageTypography extends Component {
                   <footer className="blockquote-footer">Someone famous in <cite title="Source Title">Source Title</cite></footer>
                 </blockquote>
               </div>
-            </Widget>
+            </WidgetComponent>
           </div>
 
         </div>
@@ -212,7 +212,7 @@ class PageTypography extends Component {
         <div className="row">
 
           <div className="col-lg-6">
-            <Widget header="Unstyled" className='shadow-01' excerpt={
+            <WidgetComponent header="Unstyled" className='shadow-01' excerpt={
               <span>
                 Remove the default <code className="highlighter-rouge">list-style</code> and left margin on list items (immediate children only). <strong>This
                 only applies to immediate children list items</strong>, meaning you will need to add the class for any nested lists as well.
@@ -237,11 +237,11 @@ class PageTypography extends Component {
                   <li>Eget porttitor lorem</li>
                 </ul>
               </div>
-            </Widget>
+            </WidgetComponent>
           </div>
 
           <div className="col-lg-6">
-            <Widget header="Description list alignment" className='shadow-01' excerpt={
+            <WidgetComponent header="Description list alignment" className='shadow-01' excerpt={
               <span>
                 Align terms and descriptions horizontally by using our grid system’s predefined classes (or semantic mixins). For longer terms, you can
                 optionally add a <code className="highlighter-rouge">.text-truncate</code> class to truncate the text with an ellipsis.
@@ -275,11 +275,11 @@ class PageTypography extends Component {
                   </dd>
                 </dl>
               </div>
-            </Widget>
+            </WidgetComponent>
           </div>
 
           <div className="col-lg-12">
-            <Widget header="Inline" className='shadow-01' excerpt={
+            <WidgetComponent header="Inline" className='shadow-01' excerpt={
               <span>
                 Remove a list’s bullets and apply some light <code className="highlighter-rouge">margin</code> with a combination of two classes, <code
                 className="highlighter-rouge">.list-inline</code> and <code className="highlighter-rouge">.list-inline-item</code>.
@@ -292,7 +292,7 @@ class PageTypography extends Component {
                   <li className="list-inline-item">Nulla volutpat</li>
                 </ul>
               </div>
-            </Widget>
+            </WidgetComponent>
           </div>
 
         </div>
@@ -302,4 +302,4 @@ class PageTypography extends Component {
   }
 }
 
-export default PageTypography;
+export default TypographyPage;

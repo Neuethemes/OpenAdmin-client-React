@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 
-class PageNavs extends Component {
+class NavsPage extends Component {
 
   render() {
     return (
@@ -359,4 +359,4 @@ class PageNavs extends Component {
   }
 }
 
-export default PageNavs;
+export default NavsPage;

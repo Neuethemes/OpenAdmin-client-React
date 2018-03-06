@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 
-class LayoutFooter extends Component {
+class FooterComponent extends Component {
   render() {
     return (
       <footer className="bg-white w-100 pl-5 pr-5 pt-4 pb-4 mt-auto">
@@ -10,4 +10,4 @@ class LayoutFooter extends Component {
   }
 }
 
-export default LayoutFooter;
+export default FooterComponent;

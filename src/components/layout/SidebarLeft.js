@@ -1,9 +1,9 @@
 import React, {Component} from 'react';
 import Logo from '../Logo'
-import ProgressList from "../ProgressList";
-import LayoutMainNav from "./MainNav";
+import ProgressListComponent from "../ProgressList";
+import MainNavComponent from "./MainNav";
 
-class LayoutSidebarLeft extends Component {
+class SidebarLeftComponent extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -29,9 +29,9 @@ class LayoutSidebarLeft extends Component {
       <div className="sidebar-left bg-dark text-light pl-0 pr-0" id="sidebar-left">
         <div className="collapse-wrapper">
           <Logo/>
-          <LayoutMainNav/>
+          <MainNavComponent/>
           <div className="mt-4 mx-4 d-none d-lg-block">
-            <ProgressList data={this.state.monitoring}/>
+            <ProgressListComponent data={this.state.monitoring}/>
           </div>
         </div>
       </div>
@@ -39,4 +39,4 @@ class LayoutSidebarLeft extends Component {
   }
 }
 
-export default LayoutSidebarLeft;
+export default SidebarLeftComponent;

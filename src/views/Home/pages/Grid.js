@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 
-class PageGrid extends Component {
+class GridPage extends Component {
 
   render() {
     return (
@@ -634,4 +634,4 @@ class PageGrid extends Component {
   }
 }
 
-export default PageGrid;
+export default GridPage;

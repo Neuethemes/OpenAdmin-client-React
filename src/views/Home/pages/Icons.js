@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
-import Widget from "../../../components/Widget";
+import WidgetComponent from "../../../components/Widget";
 
-class PageIcons extends Component {
+class IconsPage extends Component {
 
   render() {
     return (
@@ -12,7 +12,7 @@ class PageIcons extends Component {
         <div className="row">
 
           <div className="col-lg-12">
-            <Widget header="41 New Icons in 4.7" className='shadow-01'>
+            <WidgetComponent header="41 New Icons in 4.7" className='shadow-01'>
               <div className="bd-example">
 
                 <div className="row fontawesome-icon-list">
@@ -221,11 +221,11 @@ class PageIcons extends Component {
                 </div>
 
               </div>
-            </Widget>
+            </WidgetComponent>
           </div>
 
           <div className="col-lg-12">
-            <Widget header="Web Application Icons" className='shadow-01'>
+            <WidgetComponent header="Web Application Icons" className='shadow-01'>
               <div className="bd-example">
 
                 <div className="row fontawesome-icon-list">
@@ -1827,11 +1827,11 @@ class PageIcons extends Component {
                 </div>
 
               </div>
-            </Widget>
+            </WidgetComponent>
           </div>
 
           <div className="col-lg-12">
-            <Widget header="Accessibility Icons" className='shadow-01'>
+            <WidgetComponent header="Accessibility Icons" className='shadow-01'>
               <div className="bd-example">
 
                 <div className="row fontawesome-icon-list">
@@ -1911,11 +1911,11 @@ class PageIcons extends Component {
                 </div>
 
               </div>
-            </Widget>
+            </WidgetComponent>
           </div>
 
           <div className="col-lg-12">
-            <Widget header="Hand Icons" className='shadow-01'>
+            <WidgetComponent header="Hand Icons" className='shadow-01'>
               <div className="bd-example">
 
                 <div className="row fontawesome-icon-list">
@@ -1984,11 +1984,11 @@ class PageIcons extends Component {
                 </div>
 
               </div>
-            </Widget>
+            </WidgetComponent>
           </div>
 
           <div className="col-lg-12">
-            <Widget header="Transportation Icons" className='shadow-01'>
+            <WidgetComponent header="Transportation Icons" className='shadow-01'>
               <div className="bd-example">
 
                 <div className="row fontawesome-icon-list">
@@ -2061,11 +2061,11 @@ class PageIcons extends Component {
                 </div>
 
               </div>
-            </Widget>
+            </WidgetComponent>
           </div>
 
           <div className="col-lg-12">
-            <Widget header="Gender Icons" className='shadow-01'>
+            <WidgetComponent header="Gender Icons" className='shadow-01'>
               <div className="bd-example">
 
                 <div className="row fontawesome-icon-list">
@@ -2122,11 +2122,11 @@ class PageIcons extends Component {
                 </div>
 
               </div>
-            </Widget>
+            </WidgetComponent>
           </div>
 
           <div className="col-lg-12">
-            <Widget header="File Type Icons" className='shadow-01'>
+            <WidgetComponent header="File Type Icons" className='shadow-01'>
               <div className="bd-example">
 
                 <div className="row fontawesome-icon-list">
@@ -2201,11 +2201,11 @@ class PageIcons extends Component {
                 </div>
 
               </div>
-            </Widget>
+            </WidgetComponent>
           </div>
 
           <div className="col-lg-12">
-            <Widget header="Spinner Icons" className='shadow-01'>
+            <WidgetComponent header="Spinner Icons" className='shadow-01'>
               <div className="bd-example">
 
                 <div className="alert alert-success">
@@ -2242,11 +2242,11 @@ class PageIcons extends Component {
                 </div>
 
               </div>
-            </Widget>
+            </WidgetComponent>
           </div>
 
           <div className="col-lg-12">
-            <Widget header="Form Control Icons" className='shadow-01'>
+            <WidgetComponent header="Form Control Icons" className='shadow-01'>
               <div className="bd-example">
 
                 <div className="row fontawesome-icon-list">
@@ -2294,11 +2294,11 @@ class PageIcons extends Component {
                 </div>
 
               </div>
-            </Widget>
+            </WidgetComponent>
           </div>
 
           <div className="col-lg-12">
-            <Widget header="Payment Icons" className='shadow-01'>
+            <WidgetComponent header="Payment Icons" className='shadow-01'>
               <div className="bd-example">
 
                 <div className="row fontawesome-icon-list">
@@ -2347,11 +2347,11 @@ class PageIcons extends Component {
                 </div>
 
               </div>
-            </Widget>
+            </WidgetComponent>
           </div>
 
           <div className="col-lg-12">
-            <Widget header="Chart Icons" className='shadow-01'>
+            <WidgetComponent header="Chart Icons" className='shadow-01'>
               <div className="bd-example">
 
                 <div className="row fontawesome-icon-list">
@@ -2375,11 +2375,11 @@ class PageIcons extends Component {
                 </div>
 
               </div>
-            </Widget>
+            </WidgetComponent>
           </div>
 
           <div className="col-lg-12">
-            <Widget header="Currency Icons" className='shadow-01'>
+            <WidgetComponent header="Currency Icons" className='shadow-01'>
               <div className="bd-example">
 
                 <div className="row fontawesome-icon-list">
@@ -2490,11 +2490,11 @@ class PageIcons extends Component {
                 </div>
 
               </div>
-            </Widget>
+            </WidgetComponent>
           </div>
 
           <div className="col-lg-12">
-            <Widget header="Text Editor Icons" className='shadow-01'>
+            <WidgetComponent header="Text Editor Icons" className='shadow-01'>
               <div className="bd-example">
 
                 <div className="row fontawesome-icon-list">
@@ -2665,11 +2665,11 @@ class PageIcons extends Component {
                 </div>
 
               </div>
-            </Widget>
+            </WidgetComponent>
           </div>
 
           <div className="col-lg-12">
-            <Widget header="Directional Icons" className='shadow-01'>
+            <WidgetComponent header="Directional Icons" className='shadow-01'>
               <div className="bd-example">
 
                 <div className="row fontawesome-icon-list">
@@ -2869,11 +2869,11 @@ class PageIcons extends Component {
                 </div>
 
               </div>
-            </Widget>
+            </WidgetComponent>
           </div>
 
           <div className="col-lg-12">
-            <Widget header="Video Player Icons" className='shadow-01'>
+            <WidgetComponent header="Video Player Icons" className='shadow-01'>
               <div className="bd-example">
 
                 <div className="row fontawesome-icon-list">
@@ -2958,11 +2958,11 @@ class PageIcons extends Component {
                 </div>
 
               </div>
-            </Widget>
+            </WidgetComponent>
           </div>
 
           <div className="col-lg-12">
-            <Widget header="Brand Icons" className='shadow-01'>
+            <WidgetComponent header="Brand Icons" className='shadow-01'>
               <div className="bd-example">
 
                 <div className="row fontawesome-icon-list margin-bottom-lg">
@@ -3628,7 +3628,7 @@ class PageIcons extends Component {
                 </div>
 
               </div>
-            </Widget>
+            </WidgetComponent>
           </div>
 
         </div>
@@ -3638,4 +3638,4 @@ class PageIcons extends Component {
   }
 }
 
-export default PageIcons;
+export default IconsPage;

@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-class PageLogin extends Component {
+export class LoginView extends Component {
   constructor(props) {
     super(props);
     this.state = {email: '', password: ''}
@@ -14,5 +14,3 @@ class PageLogin extends Component {
     )
   }
 }
-
-export default PageLogin;

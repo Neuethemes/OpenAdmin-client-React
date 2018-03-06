@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
-import Widget from "../../../components/Widget";
+import WidgetComponent from "../../../components/Widget";
 
-class PageForms extends Component {
+class FormsPage extends Component {
 
   render() {
     return (
@@ -11,7 +11,7 @@ class PageForms extends Component {
 
 
           <div className="col-lg-6 mb-3">
-            <Widget header='Form controls' className='shadow-01 mb-4' excerpt="Textual form controls—like &lt;input&gt;s, &lt;select&gt;s, and &lt;textarea&gt;s—are styled with
+            <WidgetComponent header='Form controls' className='shadow-01 mb-4' excerpt="Textual form controls—like &lt;input&gt;s, &lt;select&gt;s, and &lt;textarea&gt;s—are styled with
                     the .form-control class.">
               <form>
                 <div className="form-group">
@@ -44,12 +44,12 @@ class PageForms extends Component {
                 </div>
               </form>
 
-            </Widget>
+            </WidgetComponent>
 
           </div>
 
           <div className="col-lg-6 mb-3">
-            <Widget header='Sizing' className='shadow-01 mb-4' excerpt='Set heights using classes like .form-control-lg and .form-control-sm.'>
+            <WidgetComponent header='Sizing' className='shadow-01 mb-4' excerpt='Set heights using classes like .form-control-lg and .form-control-sm.'>
               <form className="py-4">
                 <h4>Input</h4>
                 <input className="form-control form-control-lg mb-3" type="text" placeholder=".form-control-lg"/>
@@ -68,11 +68,11 @@ class PageForms extends Component {
                   <option>Small select</option>
                 </select>
               </form>
-            </Widget>
+            </WidgetComponent>
           </div>
 
           <div className="col-lg-6 mb-3">
-            <Widget header='Form groups' className='shadow-01 mb-4' excerpt='The .form-group class is the easiest way to add some structure to forms.'>
+            <WidgetComponent header='Form groups' className='shadow-01 mb-4' excerpt='The .form-group class is the easiest way to add some structure to forms.'>
               <div className="form-group">
                 <label className="form-control-label" htmlFor="formGroupExampleInput">Example label</label>
                 <input type="text" className="form-control" id="formGroupExampleInput" placeholder="Example input"/>
@@ -81,11 +81,11 @@ class PageForms extends Component {
                 <label className="form-control-label" htmlFor="formGroupExampleInput2">Another label</label>
                 <input type="text" className="form-control" id="formGroupExampleInput2" placeholder="Another input"/>
               </div>
-            </Widget>
+            </WidgetComponent>
           </div>
 
           <div className="col-lg-6 mb-3">
-            <Widget header='Checkboxes and radios' className='shadow-01 mb-4' excerpt='Default checkboxes and radios are improved upon with the help of .form-check, a single class for both input types that
+            <WidgetComponent header='Checkboxes and radios' className='shadow-01 mb-4' excerpt='Default checkboxes and radios are improved upon with the help of .form-check, a single class for both input types that
                     improves the layout and behavior of their HTML elements.'>
               <div className="row">
                 <div className="col-6">
@@ -181,11 +181,11 @@ class PageForms extends Component {
 
                 </div>
               </div>
-            </Widget>
+            </WidgetComponent>
           </div>
 
           <div className="col-lg-4 mb-3">
-            <Widget header='Readonly' className='shadow-01 mb-4' excerpt='Add the readonly boolean attribute on an input to prevent modification of the input’s value.'>
+            <WidgetComponent header='Readonly' className='shadow-01 mb-4' excerpt='Add the readonly boolean attribute on an input to prevent modification of the input’s value.'>
               <form>
                 <div className="form-group row">
                   <label htmlFor="staticEmail" className="col-sm-2 col-form-label">Email</label>
@@ -200,11 +200,11 @@ class PageForms extends Component {
                   </div>
                 </div>
               </form>
-            </Widget>
+            </WidgetComponent>
           </div>
 
           <div className="col-lg-4 mb-3">
-            <Widget header='Form grid' className='shadow-01 mb-4' excerpt='More complex forms can be built using our grid classes.'>
+            <WidgetComponent header='Form grid' className='shadow-01 mb-4' excerpt='More complex forms can be built using our grid classes.'>
               <div className="row">
                 <div className="col">
                   <input type="text" className="form-control" placeholder="First name"/>
@@ -213,11 +213,11 @@ class PageForms extends Component {
                   <input type="text" className="form-control" placeholder="Last name"/>
                 </div>
               </div>
-            </Widget>
+            </WidgetComponent>
           </div>
 
           <div className="col-lg-4 mb-3">
-            <Widget header='Form row' className='shadow-01 mb-4' excerpt='You may also swap .row for .form-row, a variation of our standard grid row that overrides the default column
+            <WidgetComponent header='Form row' className='shadow-01 mb-4' excerpt='You may also swap .row for .form-row, a variation of our standard grid row that overrides the default column
                     gutters for tighter and more compact layouts.'>
               <div className="form-row">
                 <div className="col">
@@ -227,11 +227,11 @@ class PageForms extends Component {
                   <input type="text" className="form-control" placeholder="Last name"/>
                 </div>
               </div>
-            </Widget>
+            </WidgetComponent>
           </div>
 
           <div className="col-lg-12 mb-3">
-            <Widget header='Complex layout' className='shadow-01 mb-4' excerpt='More complex layouts can also be created with the grid system.'>
+            <WidgetComponent header='Complex layout' className='shadow-01 mb-4' excerpt='More complex layouts can also be created with the grid system.'>
               <div className="form-row">
                 <div className="form-group col-md-6">
                   <label htmlFor="inputEmail4" className="col-form-label">Email</label>
@@ -274,11 +274,11 @@ class PageForms extends Component {
                 </div>
               </div>
               <button type="submit" className="btn btn-primary">Sign in</button>
-            </Widget>
+            </WidgetComponent>
           </div>
 
           <div className="col-lg-6 mb-3">
-            <Widget header='Horizontal form' className='shadow-01 mb-4' excerpt='Create horizontal forms with the grid by adding the .row class to
+            <WidgetComponent header='Horizontal form' className='shadow-01 mb-4' excerpt='Create horizontal forms with the grid by adding the .row class to
              form groups and using the .col-*-* classes to specify the width of your labels and controls.'>
               <div className="container">
                 <form>
@@ -336,11 +336,11 @@ class PageForms extends Component {
                   </div>
                 </form>
               </div>
-            </Widget>
+            </WidgetComponent>
           </div>
 
           <div className="col-lg-6 mb-3">
-            <Widget header='Validation' className='shadow-01 mb-4' excerpt='Provide valuable, actionable feedback to your users with HTML5 form
+            <WidgetComponent header='Validation' className='shadow-01 mb-4' excerpt='Provide valuable, actionable feedback to your users with HTML5 form
              validation–available in all our supported browsers.'>
               <form className="container" id="needs-validation" noValidate>
                 <div className="row">
@@ -378,11 +378,11 @@ class PageForms extends Component {
                 </div>
                 <button className="btn btn-primary" type="submit">Submit form</button>
               </form>
-            </Widget>
+            </WidgetComponent>
           </div>
 
           <div className="col-lg-6 mb-3">
-            <Widget header='Column sizing' className='shadow-01 mb-4' excerpt='As shown in the previous examples, our grid system allows you to place any number
+            <WidgetComponent header='Column sizing' className='shadow-01 mb-4' excerpt='As shown in the previous examples, our grid system allows you to place any number
              of .cols within a .row or .form-row.'>
               <form>
                 <div className="form-row">
@@ -397,11 +397,11 @@ class PageForms extends Component {
                   </div>
                 </div>
               </form>
-            </Widget>
+            </WidgetComponent>
           </div>
 
           <div className="col-lg-6 mb-3">
-            <Widget header='Auto-sizing' className='shadow-01 mb-4' excerpt='The example below uses a flexbox utility to vertically center the contents and
+            <WidgetComponent header='Auto-sizing' className='shadow-01 mb-4' excerpt='The example below uses a flexbox utility to vertically center the contents and
              changes .col to .col-auto so that your columns only take up as much space as needed.'>
               <form>
                 <div className="form-row align-items-center">
@@ -428,7 +428,7 @@ class PageForms extends Component {
                   </div>
                 </div>
               </form>
-            </Widget>
+            </WidgetComponent>
           </div>
 
         </div>
@@ -439,4 +439,4 @@ class PageForms extends Component {
   }
 }
 
-export default PageForms;
+export default FormsPage;

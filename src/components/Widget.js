@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-class Widget extends Component {
+class WidgetComponent extends Component {
   static defaultProps = {
     header: '',
     excerpt: '',
@@ -38,4 +38,4 @@ class Widget extends Component {
   }
 }
 
-export default Widget;
+export default WidgetComponent;

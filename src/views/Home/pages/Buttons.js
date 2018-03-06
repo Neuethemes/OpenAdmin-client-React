@@ -1,8 +1,8 @@
 import React, {Component} from 'react';
-import Widget from "../../../components/Widget";
+import WidgetComponent from "../../../components/Widget";
 import { Button, ButtonGroup } from 'reactstrap';
 
-class PageButtons extends Component {
+class ButtonsPage extends Component {
   constructor (props) {
     super(props);
 
@@ -33,7 +33,7 @@ class PageButtons extends Component {
         <div className="row">
 
           <div className="col-lg-6">
-            <Widget header='Colorful buttons' className='shadow-01' excerpt="Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+            <WidgetComponent header='Colorful buttons' className='shadow-01' excerpt="Lorem ipsum dolor sit amet, consectetur adipisicing elit,
                     <br>sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.">
               <Button color="primary">primary</Button>{' '}
               <Button color="secondary">secondary</Button>{' '}
@@ -42,11 +42,11 @@ class PageButtons extends Component {
               <Button color="warning">warning</Button>{' '}
               <Button color="danger">danger</Button>{' '}
               <Button color="link">link</Button>
-            </Widget>
+            </WidgetComponent>
           </div>
 
           <div className="col-lg-6">
-            <Widget header='Outline Buttons' className='shadow-01' excerpt="Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+            <WidgetComponent header='Outline Buttons' className='shadow-01' excerpt="Lorem ipsum dolor sit amet, consectetur adipisicing elit,
                     <br>sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.">
               <Button outline color="primary">primary</Button>{' '}
               <Button outline color="secondary">secondary</Button>{' '}
@@ -54,11 +54,11 @@ class PageButtons extends Component {
               <Button outline color="info">info</Button>{' '}
               <Button outline color="warning">warning</Button>{' '}
               <Button outline color="danger">danger</Button>
-            </Widget>
+            </WidgetComponent>
           </div>
 
           <div className="col-lg-6">
-            <Widget header='Button Sizes' className='shadow-01' excerpt="Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+            <WidgetComponent header='Button Sizes' className='shadow-01' excerpt="Lorem ipsum dolor sit amet, consectetur adipisicing elit,
                     <br>sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.">
               <h5 className="fw-200 mt-3 ">Large</h5>
               <Button color="primary" size="lg">Large Button</Button>{' '}
@@ -69,11 +69,11 @@ class PageButtons extends Component {
               <h5 className="fw-200 mt-3 ">Small</h5>
               <Button color="primary" size="sm">Small Button</Button>{' '}
               <Button color="secondary" size="sm">Small Button</Button>
-            </Widget>
+            </WidgetComponent>
           </div>
 
           <div className="col-lg-6">
-            <Widget header='Active and Disabled Icon States' className='shadow-01' excerpt="Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+            <WidgetComponent header='Active and Disabled Icon States' className='shadow-01' excerpt="Lorem ipsum dolor sit amet, consectetur adipisicing elit,
                     <br>sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.">
               <h5 className="fw-200 pb-1 mt-4">Active</h5>
               <Button color="primary" size="lg" active>Primary link</Button>{' '}
@@ -81,11 +81,11 @@ class PageButtons extends Component {
               <h5 className="fw-200 pb-1 mt-4">Disabled</h5>
               <Button color="primary" size="lg" disabled>Primary button</Button>{' '}
               <Button color="secondary" size="lg" disabled>Button</Button>
-            </Widget>
+            </WidgetComponent>
           </div>
 
           <div className="col-lg-6">
-            <Widget header='Checkbox and Radio Buttons' className='shadow-01' excerpt="Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+            <WidgetComponent header='Checkbox and Radio Buttons' className='shadow-01' excerpt="Lorem ipsum dolor sit amet, consectetur adipisicing elit,
                     <br>sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.">
               <h5>Radio Buttons</h5>
               <ButtonGroup>
@@ -102,7 +102,7 @@ class PageButtons extends Component {
                 <Button color="primary" onClick={() => this.onCheckboxBtnClick(3)} active={this.state.cSelected.includes(3)}>Three</Button>
               </ButtonGroup>
               <p>Selected: {JSON.stringify(this.state.cSelected)}</p>
-            </Widget>
+            </WidgetComponent>
           </div>
 
         </div>
@@ -112,4 +112,4 @@ class PageButtons extends Component {
   }
 }
 
-export default PageButtons;
+export default ButtonsPage;

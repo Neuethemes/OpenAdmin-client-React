@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 
-class LayoutSidebarRight extends Component {
+class SidebarRightComponent extends Component {
   render() {
     return (
       <div id="sidebar-right" className="sidebar-right">
@@ -41,4 +41,4 @@ class LayoutSidebarRight extends Component {
   }
 }
 
-export default LayoutSidebarRight;
+export default SidebarRightComponent;

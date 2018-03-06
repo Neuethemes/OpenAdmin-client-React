@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 
-class LayoutFooter extends Component {
+class ToolbarComponent extends Component {
   render() {
     return (
       <div className="navbar navbar-light bg-white px-3 px-sm-5 py-3">
@@ -122,4 +122,4 @@ class LayoutFooter extends Component {
   }
 }
 
-export default LayoutFooter;
+export default ToolbarComponent;

@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 
-class PageNotFound extends Component {
+class NotFoundPage extends Component {
 
   render() {
     return (
@@ -46,4 +46,4 @@ class PageNotFound extends Component {
   }
 }
 
-export default PageNotFound;
+export default NotFoundPage;
