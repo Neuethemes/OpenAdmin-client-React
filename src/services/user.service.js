@@ -3,17 +3,18 @@ import { authHeader } from '../helpers/auth-header';
 export const userService = {
   login,
   logout,
+  register,
   getAll
 };
 
-function login(username, password) {
+function login(email, password) {
   const requestOptions = {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
-    body: JSON.stringify({ username, password })
+    body: JSON.stringify({ email, password })
   };
 
-  return fetch('/users/authenticate', requestOptions)
+  return fetch('http://127.0.0.1:3003/user/authenticate', requestOptions)
     .then(response => {
       if (!response.ok) {
         return Promise.reject(response.statusText);
@@ -21,20 +22,38 @@ function login(username, password) {
 
       return response.json();
     })
-    .then(user => {
+    .then(data => {
       // login successful if there's a jwt token in the response
-      if (user && user.token) {
+      if (data && data.access_token) {
         // store user details and jwt token in local storage to keep user logged in between page refreshes
-        localStorage.setItem('user', JSON.stringify(user));
+        localStorage.setItem('access_token', data.access_token);
       }
 
-      return user;
+      return data;
     });
 }
 
 function logout() {
   // remove user from local storage to log user out
-  localStorage.removeItem('user');
+  localStorage.removeItem('access_token');
+}
+
+function register(email, password) {
+  const requestOptions = {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({ email, password })
+  };
+
+  return fetch('http://127.0.0.1:3003/user/register', requestOptions)
+    .then(response => {
+      if (!response.ok) {
+        return Promise.reject(response.statusText);
+      }
+
+      return response.json();
+    })
+    .then(data => data);
 }
 
 function getAll() {

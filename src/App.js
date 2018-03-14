@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { BrowserRouter, Route } from 'react-router-dom';
+import { Router, Route } from 'react-router-dom';
 import { connect } from 'react-redux';
 
 import { history } from './helpers/history';
@@ -26,12 +26,12 @@ class App extends Component {
         {alert.message &&
           <div className={`alert ${alert.type}`}>{alert.message}</div>
         }
-        <BrowserRouter history={history}>
+        <Router history={history}>
           <div>
             <PrivateRoute exact path="/" component={HomeView} />
             <Route path="/login" component={LoginView} />
           </div>
-        </BrowserRouter>
+        </Router>
       </div>
     );
   }

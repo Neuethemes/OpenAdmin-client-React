@@ -35,7 +35,7 @@ class DashboardPage extends Component {
   }
 
   loadSummaryData() {
-    fetch('/stats/summary')
+    fetch('http://127.0.0.1:3003/stats/summary')
       .then(response => response.json())
       .then(response => {
         let summary = response.data;
@@ -44,7 +44,7 @@ class DashboardPage extends Component {
   }
 
   loadChartsData() {
-    fetch('/stats/charts')
+    fetch('http://127.0.0.1:3003/stats/charts')
       .then(response => response.json())
       .then(response => {
         let charts = response.data;
@@ -53,7 +53,7 @@ class DashboardPage extends Component {
   }
 
   loadSalesData() {
-    fetch('/stats/sales')
+    fetch('http://127.0.0.1:3003/stats/sales')
       .then(response => response.json())
       .then(response => {
         let sales = response.data;
@@ -62,7 +62,7 @@ class DashboardPage extends Component {
   }
 
   loadMessagesData() {
-    fetch('/messages')
+    fetch('http://127.0.0.1:3003/messages')
       .then(response => response.json())
       .then(response => {
         let messages = response.data;
