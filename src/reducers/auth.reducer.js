@@ -1,7 +1,7 @@
 import { userConstants } from '../constants/user.constants';
 
-let access_token = localStorage.getItem('access_token');
-const initialState = access_token ? { loggedIn: true, access_token } : {};
+const accessToken = localStorage.getItem('access_token');
+const initialState = accessToken ? { loggedIn: true, accessToken } : {};
 
 export function authentication(state = initialState, action) {
   switch (action.type) {
