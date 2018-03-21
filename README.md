@@ -4,7 +4,8 @@
 Free Premium React Admin Dashboard Theme.
 
 ## See the Live Preview
-http://openadmin.neuethemes.net/client/html/
+http://openadmin.neuethemes.net/client/react-app/
+
 
 ![divider](https://neuethemes.net/wp-content/uploads/transparent-30.png "divider")
 
