@@ -1,7 +1,7 @@
 ![OpenAdmin Dashboard Banner](https://neuethemes.net/wp-content/uploads/github-slide-02.jpg "OpenAdmin Banner")
 
 # Free React OpenAdmin Dashboard
-Free Premium Angular Admin Dashboard Theme.
+Free Premium React Admin Dashboard Theme.
 
 ## See the Live Preview
 http://openadmin.neuethemes.net/client/html/
