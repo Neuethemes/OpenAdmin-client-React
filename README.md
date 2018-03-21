@@ -9,7 +9,7 @@ http://openadmin.neuethemes.net/client/html/
 ![divider](https://neuethemes.net/wp-content/uploads/transparent-30.png "divider")
 
 [<img align="left" src="https://neuethemes.net/wp-content/uploads/logos-tech-03-react.jpg" alt="OpenAdmin React">](https://github.com/Neuethemes/OpenAdmin-client-React)
-React is a component based library for building user interfaces for the web and mobile applications. React JS allows to build web components which can be reused throughout your web pages. So if you have been looking for a good React Admin Dashboard Template you have arrived at the correct place.
+React is a JavaScript library for building user interfaces. React makes it painless to create interactive UIs. Design simple views for each state in your application, and React will efficiently update and render just the right components when your data changes. Declarative views make your code more predictable, simpler to understand, and easier to debug.
 
 ![divider](https://neuethemes.net/wp-content/uploads/transparent-30.png "divider")
 
