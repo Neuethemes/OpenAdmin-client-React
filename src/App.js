@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Router, Route } from 'react-router-dom';
+import { Router, Route, Switch } from 'react-router-dom';
 import { connect } from 'react-redux';
 
 import { history } from './helpers/history';
@@ -27,9 +27,11 @@ class App extends Component {
           <div className={`alert ${alert.type}`}>{alert.message}</div>
         }
         <Router history={history}>
-          <div>
-            <PrivateRoute exact path="/" component={HomeView} />
-            <Route path="/login" component={LoginView} />
+          <div className="container-fluid no-gutters">
+            <Switch>
+              <Route path="/login" component={LoginView} />
+              <PrivateRoute path="/" component={HomeView} />
+            </Switch>
           </div>
         </Router>
       </div>

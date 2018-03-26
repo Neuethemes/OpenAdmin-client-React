@@ -1,9 +1,11 @@
 import React, {Component} from 'react';
+import { connect } from "react-redux";
 
 class SidebarRightComponent extends Component {
   render() {
+    const { layout } = this.props;
     return (
-      <div id="sidebar-right" className="sidebar-right">
+      <div id="sidebar-right" className="sidebar-right" style={{right: layout.right_sidebar_visible ? 0 : -300}}>
 
         <div className="sidebar-container">
 
@@ -41,4 +43,11 @@ class SidebarRightComponent extends Component {
   }
 }
 
-export default SidebarRightComponent;
+function mapStateToProps(state) {
+  const { layout } = state;
+  return {
+    layout
+  };
+}
+
+export default connect(mapStateToProps)(SidebarRightComponent);

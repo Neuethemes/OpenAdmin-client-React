@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import WidgetComponent from "../../../components/Widget";
 import { Bar, Line, Doughnut, Pie, Radar } from 'react-chartjs-2';
+import {authHeader} from "../../../helpers/auth-header";
 
 class ChartsPage extends Component {
   constructor(props) {
@@ -13,7 +14,11 @@ class ChartsPage extends Component {
         pieChart: {},
         radarChart: {}
       }
-    }
+    };
+    this.requestOptions = {
+      method: 'GET',
+      headers: authHeader()
+    };
   }
 
   componentWillMount() {
@@ -21,10 +26,10 @@ class ChartsPage extends Component {
   }
 
   loadChartsData() {
-    fetch('/stats/charts')
+    fetch('/stats/charts', this.requestOptions)
       .then(response => response.json())
       .then(response => {
-        let charts = response.data;
+        let charts = response.data[0];
         this.setState({charts})
       });
   }

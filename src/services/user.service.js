@@ -26,7 +26,7 @@ function login(email, password) {
       // login successful if there's a jwt token in the response
       if (data && data.access_token) {
         // store user details and jwt token in local storage to keep user logged in between page refreshes
-        localStorage.setItem('access_token', data.access_token);
+        localStorage.setItem('auth_user', JSON.stringify(data));
       }
 
       return data;
@@ -35,7 +35,7 @@ function login(email, password) {
 
 function logout() {
   // remove user from local storage to log user out
-  localStorage.removeItem('access_token');
+  localStorage.removeItem('auth_user');
 }
 
 function register(email, password) {

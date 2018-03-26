@@ -1,14 +1,21 @@
-import React, {Component} from 'react';
+import React, { Component } from 'react';
 import Logo from '../Logo'
 import ProgressListComponent from "../ProgressList";
 import MainNavComponent from "./MainNav";
+import { authHeader } from "../../helpers/auth-header";
+import { connect } from "react-redux";
+import classNames from 'classnames';
 
 class SidebarLeftComponent extends Component {
   constructor(props) {
     super(props);
     this.state = {
       monitoring: []
-    }
+    };
+    this.requestOptions = {
+      method: 'GET',
+      headers: authHeader()
+    };
   }
 
   componentWillMount() {
@@ -16,17 +23,18 @@ class SidebarLeftComponent extends Component {
   }
 
   loadMonitoringData() {
-    fetch('/stats/monitoring')
+    fetch('http://127.0.0.1:3003/stats/monitoring', this.requestOptions)
       .then(response => response.json())
       .then(response => {
-        let monitoring = response.data.data;
+        let monitoring = response.data;
         this.setState({monitoring})
       });
   }
 
   render() {
+    const { layout } = this.props;
     return (
-      <div className="sidebar-left bg-dark text-light pl-0 pr-0" id="sidebar-left">
+      <div className={classNames("sidebar-left", "bg-dark", "text-light", "pl-0", "pr-0", { collapse: !layout.left_sidebar_visible })} id="sidebar-left">
         <div className="collapse-wrapper">
           <Logo/>
           <MainNavComponent/>
@@ -39,4 +47,11 @@ class SidebarLeftComponent extends Component {
   }
 }
 
-export default SidebarLeftComponent;
+function mapStateToProps(state) {
+  const { layout } = state;
+  return {
+    layout
+  };
+}
+
+export default connect(mapStateToProps)(SidebarLeftComponent);

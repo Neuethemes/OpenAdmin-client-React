@@ -1,6 +1,7 @@
 // stylelint-disable declaration-no-important
 
 // Shadows extension
+.shadow-00 { box-shadow: none !important; }
 .shadow-01 { box-shadow: 1px 1px 6px rgba(0, 0, 0, .15); }
 .shadow-02 { box-shadow: 2px 2px 8px rgba(0, 0, 0, .15); }
 .shadow-03 { box-shadow: 3px 3px 10px rgba(0, 0, 0, .15); }

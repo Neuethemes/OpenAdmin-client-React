@@ -1,9 +1,10 @@
-import React, {Component} from 'react';
+import React, { Component } from 'react';
 import WidgetComponent from "../../../components/Widget";
 import MessagesComponent from "../../../components/Messages";
 import StatComponent from "../../../components/Stat";
 import ProgressListComponent from "../../../components/ProgressList";
 import { Bar, Line, Doughnut, Pie, Radar } from 'react-chartjs-2';
+import { authHeader } from "../../../helpers/auth-header";
 
 class DashboardPage extends Component {
   constructor(props) {
@@ -24,7 +25,11 @@ class DashboardPage extends Component {
       },
       sales: [],
       messages: []
-    }
+    };
+    this.requestOptions = {
+      method: 'GET',
+      headers: authHeader()
+    };
   }
 
   componentWillMount() {
@@ -35,25 +40,25 @@ class DashboardPage extends Component {
   }
 
   loadSummaryData() {
-    fetch('http://127.0.0.1:3003/stats/summary')
+    fetch('http://127.0.0.1:3003/stats/summary', this.requestOptions)
       .then(response => response.json())
       .then(response => {
-        let summary = response.data;
+        let summary = response.data[0];
         this.setState({summary})
       });
   }
 
   loadChartsData() {
-    fetch('http://127.0.0.1:3003/stats/charts')
+    fetch('http://127.0.0.1:3003/stats/charts', this.requestOptions)
       .then(response => response.json())
       .then(response => {
-        let charts = response.data;
+        let charts = response.data[0];
         this.setState({charts})
       });
   }
 
   loadSalesData() {
-    fetch('http://127.0.0.1:3003/stats/sales')
+    fetch('http://127.0.0.1:3003/stats/sales', this.requestOptions)
       .then(response => response.json())
       .then(response => {
         let sales = response.data;
@@ -62,10 +67,10 @@ class DashboardPage extends Component {
   }
 
   loadMessagesData() {
-    fetch('http://127.0.0.1:3003/messages')
+    fetch('http://127.0.0.1:3003/messages', this.requestOptions)
       .then(response => response.json())
       .then(response => {
-        let messages = response.data;
+        let messages = response.messages;
         this.setState({messages})
       });
   }

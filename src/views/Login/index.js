@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
 import { TabContent, TabPane } from 'reactstrap';
-import { connect } from 'react-redux';
 import classNames from 'classnames';
 
 import { userActions } from '../../actions/user.actions';
 import LogoComponent from "../../components/Logo";
+import { connect } from "react-redux";
 
 class LoginView extends Component {
   constructor(props) {
@@ -168,9 +168,9 @@ class LoginView extends Component {
 }
 
 function mapStateToProps(state) {
-  const { loggingIn } = state.authentication;
+  const { layout } = state;
   return {
-    loggingIn
+    layout
   };
 }
 
