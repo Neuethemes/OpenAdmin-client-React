@@ -1,13 +1,27 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { layoutActions } from "../../actions/layout.actions";
+import classNames from "classnames";
+import {authHeader} from "../../helpers/auth-header";
 
 class ToolbarComponent extends Component {
   constructor(props) {
     super(props);
 
+    this.state = {
+      messages: [],
+      showProfileMenu: false
+    };
+    this.requestOptions = {
+      method: 'GET',
+      headers: authHeader()
+    };
+
     this.leftSidebarToggle = this.leftSidebarToggle.bind(this);
     this.rightSidebarToggle = this.rightSidebarToggle.bind(this);
+    this.onProfileDropdownClick = this.onProfileDropdownClick.bind(this);
+    this.onMessagesDropdownClick = this.onMessagesDropdownClick.bind(this);
+    this.onNotifyDropdownClick = this.onNotifyDropdownClick.bind(this);
   }
 
   leftSidebarToggle() {
@@ -18,6 +32,31 @@ class ToolbarComponent extends Component {
   rightSidebarToggle() {
     const { layout, dispatch } = this.props;
     return layout.right_sidebar_visible ? dispatch(layoutActions.rightSidebarHide()) : dispatch(layoutActions.rightSidebarShow());
+  }
+
+  onProfileDropdownClick() {
+    this.setState({ showProfileDropdown: !this.state.showProfileDropdown });
+  }
+
+  onMessagesDropdownClick() {
+    this.setState({ showProfileDropdown: !this.state.showProfileDropdown });
+  }
+
+  onNotifyDropdownClick() {
+    this.setState({ showNotifyDropdown: !this.state.showNotifyDropdown });
+  }
+
+  componentWillMount() {
+    this.loadMessagesData();
+  }
+
+  loadMessagesData() {
+    fetch('http://127.0.0.1:3003/messages', this.requestOptions)
+      .then(response => response.json())
+      .then(response => {
+        let messages = response.messages;
+        this.setState({messages})
+      });
   }
 
   render() {
@@ -87,12 +126,12 @@ class ToolbarComponent extends Component {
           </li>
 
           <li className="m-sm-1 m-md-2">
-            <a className="btn btn-light btn-icon rounded-circle position-relative" id="dropdownBasic2">
+            <a className="btn btn-light btn-icon rounded-circle position-relative" onClick={this.onMessageDropdownClick}>
               <i className="fa fa-envelope" aria-hidden="true"/>
               <span className="badge badge-hint badge-success">16</span>
             </a>
 
-            <div className="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownBasic2">
+            <div className={classNames('dropdown-menu', 'dropdown-menu-right', { show: this.state.showMessageDropdown})}>
 
               <div className="media d-flex pl-4 pr-4 pt-3 pb-3">
                 <a href="#!">Read all Messages</a>
@@ -109,7 +148,7 @@ class ToolbarComponent extends Component {
           </li>
 
           <li className="m-sm-1 m-md-2">
-            <a data-toggle="dropdown" id="dropdownBasic3">
+            <a data-toggle="dropdown" id="dropdownBasic3" onClick={this.onProfileDropdownClick}>
               <div className="d-inline-block mr-2">
                 <img src={user_avatar} className="rounded-circle" height="32px"/>
               </div>
@@ -118,7 +157,7 @@ class ToolbarComponent extends Component {
               </div>
             </a>
 
-            <div className="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownBasic3">
+            <div className={classNames('dropdown-menu', 'dropdown-menu-right', { show: this.state.showProfileDropdown})}>
               <a className="dropdown-item">
                 <i className="fa fa-user-circle-o" aria-hidden="true"/> Profile
               </a>
