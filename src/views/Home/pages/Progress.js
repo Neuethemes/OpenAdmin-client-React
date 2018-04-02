@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 
-class PageProgress extends Component {
+class ProgressPage extends Component {
 
   render() {
     return (
@@ -226,4 +226,4 @@ class PageProgress extends Component {
   }
 }
 
-export default PageProgress;
+export default ProgressPage;

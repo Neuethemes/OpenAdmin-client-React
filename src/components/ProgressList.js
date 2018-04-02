@@ -1,7 +1,8 @@
 import React from 'react';
 import { Progress } from 'reactstrap';
+import MessagesComponent from "./Messages";
 
-const ProgressList = ({data}) => {
+const ProgressListComponent = ({data}) => {
   const list = data.map((t) => (
     <div className="mt-3">
       <p className="widget-title">{t.title}</p>
@@ -12,4 +13,4 @@ const ProgressList = ({data}) => {
   return list;
 };
 
-export default ProgressList;
+export default ProgressListComponent;

@@ -2,7 +2,7 @@ import React, {Component} from 'react';
 import { Link } from 'react-router-dom';
 import { Badge, Collapse } from 'reactstrap';
 
-class LayoutMainNav extends Component {
+class MainNavComponent extends Component {
   constructor(props) {
     super(props);
     this.state = { showNavItem: { root: 0, sub: 0 } };
@@ -158,4 +158,4 @@ class LayoutMainNav extends Component {
   }
 }
 
-export default LayoutMainNav;
+export default MainNavComponent;

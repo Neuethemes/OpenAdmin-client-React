@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
-import Widget from "../../../components/Widget";
+import WidgetComponent from "../../../components/Widget";
 
-class PageTables extends Component {
+class TablesPage extends Component {
 
   render() {
     return (
@@ -10,7 +10,7 @@ class PageTables extends Component {
         <div className="row">
 
           <div className="col-lg-12 mb-3">
-            <Widget header='Basic Example' className='shadow-01' excerpt='All table styles are inherited in Bootstrap 4, meaning any nested tables will be
+            <WidgetComponent header='Basic Example' className='shadow-01' excerpt='All table styles are inherited in Bootstrap 4, meaning any nested tables will be
              styled in the same manner as the parent.'>
               <table className="table">
                 <thead>
@@ -42,11 +42,11 @@ class PageTables extends Component {
                 </tr>
                 </tbody>
               </table>
-            </Widget>
+            </WidgetComponent>
           </div>
 
           <div className="col-lg-6 mb-3">
-            <Widget header='Inverse table' className='shadow-01' excerpt='You can also invert the colors—with light text on dark backgrounds—with <code>.table-dark</code>.'>
+            <WidgetComponent header='Inverse table' className='shadow-01' excerpt='You can also invert the colors—with light text on dark backgrounds—with <code>.table-dark</code>.'>
               <table className="table table-dark">
                 <thead>
                 <tr>
@@ -77,11 +77,11 @@ class PageTables extends Component {
                 </tr>
                 </tbody>
               </table>
-            </Widget>
+            </WidgetComponent>
           </div>
 
           <div className="col-lg-6 mb-3">
-            <Widget header='Table head options' className='shadow-01' excerpt='Similar to default and inverse tables, use one of two modifier classes to make <code>&lt;thead&gt;</code>s appear light or dark gray.'>
+            <WidgetComponent header='Table head options' className='shadow-01' excerpt='Similar to default and inverse tables, use one of two modifier classes to make <code>&lt;thead&gt;</code>s appear light or dark gray.'>
               <table className="table">
                 <thead className="thead-dark">
                 <tr>
@@ -112,11 +112,11 @@ class PageTables extends Component {
                 </tr>
                 </tbody>
               </table>
-            </Widget>
+            </WidgetComponent>
           </div>
 
           <div className="col-lg-6 mb-3">
-            <Widget header='Striped rows' className='shadow-01' excerpt='Use .table-striped to add zebra-striping to any table row within the <code>&lt;tbody&gt;</code>.'>
+            <WidgetComponent header='Striped rows' className='shadow-01' excerpt='Use .table-striped to add zebra-striping to any table row within the <code>&lt;tbody&gt;</code>.'>
               <table className="table table-striped">
                 <thead>
                 <tr>
@@ -153,11 +153,11 @@ class PageTables extends Component {
                 </tr>
                 </tbody>
               </table>
-            </Widget>
+            </WidgetComponent>
           </div>
 
           <div className="col-lg-6 mb-3">
-            <Widget header='Bordered table' className='shadow-01' excerpt='Add <code>.table-bordered</code> for borders on all sides of the table and cells.'>
+            <WidgetComponent header='Bordered table' className='shadow-01' excerpt='Add <code>.table-bordered</code> for borders on all sides of the table and cells.'>
               <table className="table table-bordered">
                 <thead>
                 <tr>
@@ -193,11 +193,11 @@ class PageTables extends Component {
                 </tr>
                 </tbody>
               </table>
-            </Widget>
+            </WidgetComponent>
           </div>
 
           <div className="col-lg-6 mb-3">
-            <Widget header='Hoverable rows' className='shadow-01' excerpt='Add <code>.table-hover</code> to enable a hover state on table rows within a <code>&lt;tbody&gt;</code>.'>
+            <WidgetComponent header='Hoverable rows' className='shadow-01' excerpt='Add <code>.table-hover</code> to enable a hover state on table rows within a <code>&lt;tbody&gt;</code>.'>
               <table className="table table-hover">
                 <thead>
                 <tr>
@@ -227,11 +227,11 @@ class PageTables extends Component {
                 </tr>
                 </tbody>
               </table>
-            </Widget>
+            </WidgetComponent>
           </div>
 
           <div className="col-lg-6 mb-3">
-            <Widget header='Small table' className='shadow-01' excerpt='Add <code>.table-sm</code> to make tables more compact by cutting cell padding in half.'>
+            <WidgetComponent header='Small table' className='shadow-01' excerpt='Add <code>.table-sm</code> to make tables more compact by cutting cell padding in half.'>
               <table className="table table-sm">
                 <thead>
                 <tr>
@@ -271,11 +271,11 @@ class PageTables extends Component {
                 </tr>
                 </tbody>
               </table>
-            </Widget>
+            </WidgetComponent>
           </div>
 
           <div className="col-lg-12 mb-3">
-            <Widget header='Contextual classes' className='shadow-01' excerpt='Use contextual classes to color table rows or individual cells.'>
+            <WidgetComponent header='Contextual classes' className='shadow-01' excerpt='Use contextual classes to color table rows or individual cells.'>
               <table className="table">
                 <thead>
                 <tr>
@@ -348,7 +348,7 @@ class PageTables extends Component {
                 </tr>
                 </tbody>
               </table>
-            </Widget>
+            </WidgetComponent>
           </div>
 
         </div>
@@ -358,4 +358,4 @@ class PageTables extends Component {
   }
 }
 
-export default PageTables;
+export default TablesPage;
