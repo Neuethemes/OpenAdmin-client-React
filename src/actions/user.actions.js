@@ -17,7 +17,7 @@ function login(email, password) {
       .then(
         user => {
           dispatch(success(user));
-          history.push('/');
+          history.push(`${process.env.PUBLIC_URL}/`);
         },
         error => {
           dispatch(failure(error));
@@ -44,7 +44,7 @@ function register(email, password) {
       .then(
         user => {
           dispatch(success(user));
-          history.push('/');
+          history.push(`${process.env.PUBLIC_URL}/`);
         },
         error => {
           dispatch(failure(error));
