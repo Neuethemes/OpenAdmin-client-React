@@ -34,19 +34,19 @@ export const HomeView = () => {
 
           <div>
             <Switch>
-              <Route exact path="/" component={DashboardPage}/>
-              <Route path="/dashboard" component={DashboardPage}/>
-              <Route path="/charts" component={ChartsPage}/>
-              <Route path="/widgets" component={WidgetsPage}/>
-              <Route path="/tables" component={TablesPage}/>
-              <Route path="/grid" component={GridPage}/>
-              <Route path="/buttons" component={ButtonsPage}/>
-              <Route path="/typography" component={TypographyPage}/>
-              <Route path="/icons" component={IconsPage}/>
-              <Route path="/navs" component={NavsPage}/>
-              <Route path="/badges" component={BadgesPage}/>
-              <Route path="/progress" component={ProgressPage}/>
-              <Route path="/forms" component={FormsPage}/>
+              <Route exact path={`${process.env.PUBLIC_URL}/`} component={DashboardPage}/>
+              <Route path={`${process.env.PUBLIC_URL}/dashboard`} component={DashboardPage}/>
+              <Route path={`${process.env.PUBLIC_URL}/charts`} component={ChartsPage}/>
+              <Route path={`${process.env.PUBLIC_URL}/widgets`} component={WidgetsPage}/>
+              <Route path={`${process.env.PUBLIC_URL}/tables`} component={TablesPage}/>
+              <Route path={`${process.env.PUBLIC_URL}/grid`} component={GridPage}/>
+              <Route path={`${process.env.PUBLIC_URL}/buttons`} component={ButtonsPage}/>
+              <Route path={`${process.env.PUBLIC_URL}/typography`} component={TypographyPage}/>
+              <Route path={`${process.env.PUBLIC_URL}/icons`} component={IconsPage}/>
+              <Route path={`${process.env.PUBLIC_URL}/navs`} component={NavsPage}/>
+              <Route path={`${process.env.PUBLIC_URL}/badges`} component={BadgesPage}/>
+              <Route path={`${process.env.PUBLIC_URL}/progress`} component={ProgressPage}/>
+              <Route path={`${process.env.PUBLIC_URL}/forms`} component={FormsPage}/>
               <Route path="*" component={NotFoundPage}/>
             </Switch>
           </div>
