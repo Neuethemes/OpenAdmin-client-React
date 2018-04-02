@@ -29,8 +29,8 @@ class App extends Component {
         <Router history={history}>
           <div className="container-fluid no-gutters">
             <Switch>
-              <Route path="/login" component={LoginView} />
-              <PrivateRoute path="/" component={HomeView} />
+              <Route path={`${process.env.PUBLIC_URL}/login`} component={LoginView} />
+              <PrivateRoute path={`${process.env.PUBLIC_URL}/`} component={HomeView} />
             </Switch>
           </div>
         </Router>

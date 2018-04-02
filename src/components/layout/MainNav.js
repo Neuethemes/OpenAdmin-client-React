@@ -29,26 +29,26 @@ class MainNavComponent extends Component {
         </div>
         <ul id="sidebarNav" className="nav nav-dark flex-column">
           <li className="nav-item">
-            <Link className="nav-link" to='/dashboard'>
+            <Link className="nav-link" to={`${process.env.PUBLIC_URL}/dashboard`}>
               <i className="fa fa-tachometer" aria-hidden="true"/>
               <span className="d-none d-lg-inline">Dashboards</span>
             </Link>
           </li>
           <li className="nav-item">
-            <Link className="nav-link" to="/charts">
+            <Link className="nav-link" to={`${process.env.PUBLIC_URL}/charts`}>
               <i className="fa fa-pie-chart" aria-hidden="true"/>
               <span className="d-none d-lg-inline">Charts</span>
             </Link>
           </li>
           <li className="nav-item">
-            <Link className="nav-link" to="/widgets">
+            <Link className="nav-link" to={`${process.env.PUBLIC_URL}/widgets`}>
               <i className="fa fa-list" aria-hidden="true"/>
               <span className="d-none d-lg-inline">Widgets</span>
               <Badge color="success" className='text-uppercase float-right d-none d-lg-block'>New</Badge>
             </Link>
           </li>
           <li className="nav-item">
-            <Link className="nav-link" to="/tables">
+            <Link className="nav-link" to={`${process.env.PUBLIC_URL}/tables`}>
               <i className="fa fa-table" aria-hidden="true"/>
               <span className="d-none d-lg-inline">Tables</span>
             </Link>
@@ -91,7 +91,7 @@ class MainNavComponent extends Component {
             </Collapse>
           </li>
           <li className="nav-item">
-            <Link className="nav-link" to="/grid">
+            <Link className="nav-link" to={`${process.env.PUBLIC_URL}/grid`}>
               <i className="fa fa-th" aria-hidden="true"/>
               <span className="d-none d-lg-inline">Grid</span>
               <Badge color="danger" className='text-uppercase float-right d-none d-lg-block'>Hot</Badge>
@@ -111,10 +111,10 @@ class MainNavComponent extends Component {
             </a>
             <Collapse isOpen={this.state.showNavItem.root === 2} tag="ul" className="nav flex-column bg-dark">
               <li className="nav-item">
-                <Link className="nav-link nav-level-1" to="/login">Login</Link>
+                <Link className="nav-link nav-level-1" to={`${process.env.PUBLIC_URL}/login`}>Login</Link>
               </li>
               <li className="nav-item">
-                <Link className="nav-link nav-level-1" to="/404">404 Error</Link>
+                <Link className="nav-link nav-level-1" to={`${process.env.PUBLIC_URL}/404`}>404 Error</Link>
               </li>
             </Collapse>
           </li>
@@ -126,27 +126,27 @@ class MainNavComponent extends Component {
             </a>
             <Collapse isOpen={this.state.showNavItem.root === 3} tag="ul" className="nav flex-column bg-dark">
               <li className="nav-item">
-                <Link className="nav-link nav-level-1" to="/buttons">Buttons</Link>
+                <Link className="nav-link nav-level-1" to={`${process.env.PUBLIC_URL}/buttons`}>Buttons</Link>
               </li>
               <li className="nav-item">
-                <Link className="nav-link nav-level-1" to="/typography">Typography</Link>
+                <Link className="nav-link nav-level-1" to={`${process.env.PUBLIC_URL}/typography`}>Typography</Link>
               </li>
               <li className="nav-item">
-                <Link className="nav-link nav-level-1" to="/icons">Icons</Link>
+                <Link className="nav-link nav-level-1" to={`${process.env.PUBLIC_URL}/icons`}>Icons</Link>
               </li>
               <li className="nav-item">
-                <Link className="nav-link nav-level-1" to="/navs">Navs</Link>
+                <Link className="nav-link nav-level-1" to={`${process.env.PUBLIC_URL}/navs`}>Navs</Link>
               </li>
               <li className="nav-item">
-                <Link className="nav-link nav-level-1" to="/badges">Badges, Labels</Link>
+                <Link className="nav-link nav-level-1" to={`${process.env.PUBLIC_URL}/badges`}>Badges, Labels</Link>
               </li>
               <li className="nav-item">
-                <Link className="nav-link nav-level-1" to="/progress">Progress</Link>
+                <Link className="nav-link nav-level-1" to={`${process.env.PUBLIC_URL}/progress`}>Progress</Link>
               </li>
             </Collapse>
           </li>
           <li className="nav-item">
-            <Link className="nav-link" to="/forms">
+            <Link className="nav-link" to={`${process.env.PUBLIC_URL}/forms`}>
               <i className="fa fa-id-card" aria-hidden="true"/>
               <span className="d-none d-lg-inline">Forms</span>
             </Link>
