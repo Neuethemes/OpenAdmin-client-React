@@ -3,6 +3,7 @@ import { connect } from 'react-redux';
 import { layoutActions } from "../../actions/layout.actions";
 import classNames from "classnames";
 import {authHeader} from "../../helpers/auth-header";
+import MessagesComponent from "../Messages";
 
 class ToolbarComponent extends Component {
   constructor(props) {
@@ -10,7 +11,9 @@ class ToolbarComponent extends Component {
 
     this.state = {
       messages: [],
-      showProfileMenu: false
+      showProfileDropdown: false,
+      showMessagesDropdown: false,
+      showNotifyDropdown: false
     };
     this.requestOptions = {
       method: 'GET',
@@ -39,7 +42,7 @@ class ToolbarComponent extends Component {
   }
 
   onMessagesDropdownClick() {
-    this.setState({ showProfileDropdown: !this.state.showProfileDropdown });
+    this.setState({ showMessagesDropdown: !this.state.showMessagesDropdown });
   }
 
   onNotifyDropdownClick() {
@@ -82,12 +85,12 @@ class ToolbarComponent extends Component {
         <ul className="nav ml-auto">
 
           <li className="m-sm-1 m-md-2">
-            <a className="btn btn-light btn-icon rounded-circle position-relative" id="dropdownBasic1">
+            <a className="btn btn-light btn-icon rounded-circle position-relative" id="dropdownBasic1" onClick={this.onNotifyDropdownClick}>
               <i className="fa fa-bell" aria-hidden="true"/>
               <span className="badge badge-hint badge-primary">8</span>
             </a>
 
-            <div className="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownBasic1">
+            <div className={classNames('dropdown-menu', 'dropdown-menu-right', { show: this.state.showNotifyDropdown})}>
 
               <ul className="list-unstyled">
                 <li className="dropdown-item media border-bottom-1 border-light p-4">
@@ -126,12 +129,20 @@ class ToolbarComponent extends Component {
           </li>
 
           <li className="m-sm-1 m-md-2">
-            <a className="btn btn-light btn-icon rounded-circle position-relative" onClick={this.onMessageDropdownClick}>
+            <a className="btn btn-light btn-icon rounded-circle position-relative" onClick={this.onMessagesDropdownClick}>
               <i className="fa fa-envelope" aria-hidden="true"/>
               <span className="badge badge-hint badge-success">16</span>
             </a>
 
-            <div className={classNames('dropdown-menu', 'dropdown-menu-right', { show: this.state.showMessageDropdown})}>
+            <div className={classNames('dropdown-menu', 'dropdown-menu-right', { show: this.state.showMessagesDropdown})}>
+
+              <div className="p-4">
+                <h5 className="tab-title">{this.state.messages.length} Notes Received</h5>
+                <p className="mb-0">
+                  Lorem ipsum dolor sit amet
+                </p>
+              </div>
+              <MessagesComponent list={this.state.messages}/>
 
               <div className="media d-flex pl-4 pr-4 pt-3 pb-3">
                 <a href="#!">Read all Messages</a>
